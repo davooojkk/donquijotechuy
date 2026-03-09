@@ -1,0 +1,45 @@
+.footer {
+  margin-top: 500px;
+  background-color: var(--g11);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.davotech {
+  font-size:  75%;
+  font-weight: 500;
+  color: var(--g9);
+}
+
+.footer-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-menu a {
+  color: var(--a3);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.horarios {
+  color: var(--g5);
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 75%;
+  color: var(--g8);
+}
+
+
+
+
+

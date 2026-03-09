@@ -1,0 +1,42 @@
+.titulos {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+.subtitulos {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.body-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.cta {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+@media (min-width: 500px) {
+  .titulos {
+    font-size: 2.5rem;
+  }
+
+  .subtitulos {
+    font-size: 2rem;
+  }
+
+  .body-text {
+    font-size: 1.125rem;
+  }
+
+  .cta {
+    font-size: 1.125rem;
+  }
+}
