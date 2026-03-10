@@ -10,3 +10,5 @@
 @import "./generales/header.css";
 @import "./generales/footer.css";
 
+/* carta */
+@import "./carta/carta.css";
