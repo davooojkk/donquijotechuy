@@ -18,7 +18,7 @@ export function renderMenu() {
     titulo.textContent = categoriaNombre;
 
     const flecha = document.createElement("img");
-    flecha.src = "/img/icons/flecha.svg";
+    flecha.src = "./img/icons/flecha.svg";
     flecha.classList.add("flecha");
 
     header.appendChild(titulo);

@@ -222,7 +222,7 @@ export const cartaData = {
   ENSALADAS: {
     tipo: "simple",
     items: [
-      { nombre: "Don Quijote", precio: 490 },
+      { nombre: "'Don Quijote'", precio: 490 },
       { nombre: "Mixta", precio: 230 },
       { nombre: "Mixta con Cebolla", precio: 250 },
       { nombre: "Rusa", precio: 260 },
