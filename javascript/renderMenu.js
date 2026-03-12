@@ -2,6 +2,11 @@ import { cartaData } from "./cartaData.js";
 
 export function renderMenu() {
 
+  const nombresAmigables = {
+    MARISCOSYPESCADOS: "Mariscos y Pescados",
+    MENUKIDS: "Menú Kids"
+  };
+
   const menuContainer = document.getElementById("carta");
   menuContainer.innerHTML = "";
 
@@ -15,10 +20,13 @@ export function renderMenu() {
 
     const titulo = document.createElement("p");
     titulo.classList.add("titulos");
-    titulo.textContent = categoriaNombre;
+
+    // --- FORMATEO DE NOMBRE ---
+    titulo.textContent = nombresAmigables[categoriaNombre] 
+      || categoriaNombre.charAt(0) + categoriaNombre.slice(1).toLowerCase();
 
     const flecha = document.createElement("img");
-    flecha.src = "./img/icons/flecha.svg";
+    flecha.src = "/img/icons/flecha.svg";
     flecha.classList.add("flecha");
 
     header.appendChild(titulo);
@@ -36,7 +44,7 @@ export function renderMenu() {
 
         const plato = document.createElement("p");
         plato.classList.add("body-text");
-          plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
+        plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
 
         contenido.appendChild(plato);
 
@@ -51,7 +59,7 @@ export function renderMenu() {
 
         const subtitulo = document.createElement("p");
         subtitulo.classList.add("subtitulos");
-        subtitulo.textContent = subNombre;
+        subtitulo.textContent = subNombre; // Podés hacer otro map si querés nombres amigables de subcategorías
 
         contenido.appendChild(subtitulo);
 
@@ -60,23 +68,17 @@ export function renderMenu() {
           const plato = document.createElement("p");
           plato.classList.add("body-text");
 
-
-
           if (item.precio) {
                plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
-               
            }
 
           if (item.medioMetro) {
                plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2M: <span class="precio">$${item.medioMetro}</span> | Porción: <span class="precio">$${item.porcion}</span>`;
-              
             }
 
-            if (!item.precio && !item.medioMetro) {
+          if (!item.precio && !item.medioMetro) {
             plato.textContent = item.nombre;
           }
-
-      
 
           contenido.appendChild(plato);
 

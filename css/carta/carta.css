@@ -1,3 +1,18 @@
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.carta {
+  grid-column: 1;
+}
+
+aside {
+  max-width: 100%;
+  grid-column: 2;
+  overflow: hidden;    
+}
+
 .categoria-header {
   display: flex;
   justify-content: space-between;
@@ -6,6 +21,7 @@
   margin-bottom: 1.2rem;
   cursor: pointer;
   padding: 1rem;
+  margin-right: 1rem;
 }
 
 .flecha {
@@ -13,7 +29,7 @@
 }
 
 .contenido-categoria {
-  transition: 0.3s;
+  
   background-color: var(--g11);
   padding: 0.5rem;
 }
