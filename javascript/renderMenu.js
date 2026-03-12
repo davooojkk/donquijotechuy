@@ -36,7 +36,7 @@ export function renderMenu() {
 
         const plato = document.createElement("p");
         plato.classList.add("body-text");
-        plato.textContent = `${item.nombre} - $${item.precio}`;
+          plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
 
         contenido.appendChild(plato);
 
@@ -60,13 +60,23 @@ export function renderMenu() {
           const plato = document.createElement("p");
           plato.classList.add("body-text");
 
+
+
           if (item.precio) {
-            plato.textContent = `${item.nombre} - $${item.precio}`;
-          }
+               plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
+               
+           }
 
           if (item.medioMetro) {
-            plato.textContent = `${item.nombre} - Medio: $${item.medioMetro} | Porción: $${item.porcion}`;
+               plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2M: <span class="precio">$${item.medioMetro}</span> | Porción: <span class="precio">$${item.porcion}</span>`;
+              
+            }
+
+            if (!item.precio && !item.medioMetro) {
+            plato.textContent = item.nombre;
           }
+
+      
 
           contenido.appendChild(plato);
 
