@@ -21,12 +21,12 @@ export function renderMenu() {
     const titulo = document.createElement("p");
     titulo.classList.add("titulos");
 
-    // --- FORMATEO DE NOMBRE ---
+  
     titulo.textContent = nombresAmigables[categoriaNombre] 
       || categoriaNombre.charAt(0) + categoriaNombre.slice(1).toLowerCase();
 
     const flecha = document.createElement("img");
-    flecha.src = "/img/icons/flecha.svg";
+    flecha.src = "./img/icons/flecha.svg";
     flecha.classList.add("flecha");
 
     header.appendChild(titulo);

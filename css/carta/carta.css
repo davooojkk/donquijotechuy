@@ -1,17 +1,25 @@
 .layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 100%;
 }
 
 .carta {
   grid-column: 1;
 }
 
-aside {
-  max-width: 100%;
+.galeria-comida {
+  background-image: url('../../img/src/carrusel-carta.jpg');
+  background-size: cover;
+  background-repeat: repeat-y;
   grid-column: 2;
-  overflow: hidden;    
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+  transition: 0.3s;
 }
+
 
 .categoria-header {
   display: flex;
@@ -29,7 +37,6 @@ aside {
 }
 
 .contenido-categoria {
-  
   background-color: var(--g11);
   padding: 0.5rem;
 }
@@ -52,11 +59,3 @@ aside {
   font-weight: 600;
   font-size: 85%;
 }
-
-
-
-
-
-
-
-
