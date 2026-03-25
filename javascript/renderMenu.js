@@ -21,8 +21,8 @@ export function renderMenu() {
     const titulo = document.createElement("p");
     titulo.classList.add("titulos");
 
-  
-    titulo.textContent = nombresAmigables[categoriaNombre] 
+
+    titulo.textContent = nombresAmigables[categoriaNombre]
       || categoriaNombre.charAt(0) + categoriaNombre.slice(1).toLowerCase();
 
     const flecha = document.createElement("img");
@@ -69,12 +69,12 @@ export function renderMenu() {
           plato.classList.add("body-text");
 
           if (item.precio) {
-               plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
-           }
+            plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
+          }
 
           if (item.medioMetro) {
-               plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2M: <span class="precio">$${item.medioMetro}</span> | Porción: <span class="precio">$${item.porcion}</span>`;
-            }
+            plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2M: <span class="precio">$${item.medioMetro}</span> | Porción: <span class="precio">$${item.porcion}</span>`;
+          }
 
           if (!item.precio && !item.medioMetro) {
             plato.textContent = item.nombre;
