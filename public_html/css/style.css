@@ -1,0 +1,14 @@
+/* basicos */
+
+@import "./basicos.css/colores.css";
+@import "./basicos.css/tipografia.css";
+@import "./basicos.css/componentes.css";
+@import "./generales/home.css";
+
+/* header and footer */
+
+@import "./generales/header.css";
+@import "./generales/footer.css";
+
+/* carta */
+@import "./carta/carta.css";

@@ -1,0 +1,29 @@
+.servicios {
+  margin: 1rem;
+  padding: 1rem;
+
+}
+
+.servicios .titulos {
+  color: var(--g11);
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+}
+
+.opcion {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.opcion a {
+  color: var(--g11);
+}
