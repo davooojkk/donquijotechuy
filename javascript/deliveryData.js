@@ -41,7 +41,7 @@ export const deliveryData = {
       "Super Especiales": {
         items: [
           { nombre: "Muzzarella con Camarón", medioMetro: 750 },
-          { nombre: "Muzzarella Don Quijote", medioMetro: 680 },
+          { nombre: "Muzzarella Don Quijote", medioMetro: 750 },
         ],
       },
     },
@@ -216,10 +216,10 @@ export const deliveryData = {
       { nombre: "Fritas", precio: 200 },
       { nombre: "Fritas Champi", precio: 250 },
       { nombre: "Fritas Cuatro Quesos", precio: 250 },
-      { nombre: "Fritas Cheddar", precio: 280 },
+      { nombre: "Fritas Cheddar", precio: 250 },
       { nombre: "Fritas Don Quijote", precio: 350 },
       { nombre: "Papas Noisette", precio: 250 },
-      { nombre: "Fritas con Cheddar y Panceta", precio: 250 },
+      { nombre: "Fritas con Cheddar y Panceta", precio: 280 },
     ],
   },
   ENSALADAS: {
