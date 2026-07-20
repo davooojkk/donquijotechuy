@@ -10,12 +10,16 @@
 }
 
 .davotech {
-  font-size:  75%;
+  font-size: 75%;
   font-weight: 500;
-  color: var(--g9);
+  color: var(--g1);
 }
 
-.footer-menu{
+.davotech a {
+  color: var(--a6);
+}
+
+.footer-menu {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -37,8 +41,3 @@
   font-size: 75%;
   color: var(--g8);
 }
-
-
-
-
-
