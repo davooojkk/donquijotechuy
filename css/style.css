@@ -1,8 +1,8 @@
 /* basicos */
 
-@import "./basicos.css/colores.css";
-@import "./basicos.css/tipografia.css";
-@import "./basicos.css/componentes.css";
+@import "./basicos/colores.css";
+@import "./basicos/tipografia.css";
+@import "./basicos/componentes.css";
 @import "./generales/home.css";
 
 /* header and footer */
