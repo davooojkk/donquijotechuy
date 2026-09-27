@@ -1,3 +1,3 @@
-import { renderDelivery } from "./renderDelivery.js";
+import { renderMenu } from "./renderDelivery.js";
 
-renderDelivery();
+renderMenu();

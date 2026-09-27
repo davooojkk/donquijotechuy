@@ -15,7 +15,6 @@ export const cartaData = {
           { nombre: "Muzzarella con Calabreza", medioMetro: 770, porcion: 440 },
           { nombre: "Muzzarella con Longaniza", medioMetro: 770, porcion: 440 },
           { nombre: "Muzzarella con Atún", medioMetro: 770, porcion: 440 },
-          { nombre: "Muzzarella con Morrón", medioMetro: 770, porcion: 440 },
           { nombre: "Muzzarella con Sardina", medioMetro: 770, porcion: 440 },
           { nombre: "Muzzarella a la Provenzal", medioMetro: 770, porcion: 440 },
           {
