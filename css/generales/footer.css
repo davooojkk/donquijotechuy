@@ -1,43 +1,62 @@
-.footer {
-  background-color: var(--g11);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  text-align: right;
+.site-footer {
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--g11);
+  color: var(--surface);
+}
+
+.site-footer__inner {
+  display: grid;
   gap: 1.5rem;
-  padding: 1.5rem;
+  padding-block: 2rem;
 }
 
-.davotech {
-  font-size: 75%;
-  font-weight: 500;
-  color: var(--g1);
+.site-footer__brand {
+  font-size: 1.3rem;
 }
 
-.davotech a {
-  color: var(--a6);
+.site-footer__credit {
+  margin-top: 0.5rem;
+  color: var(--g4);
+  font-size: 0.72rem;
 }
 
-.footer-menu {
+.site-footer__credit a {
+  color: var(--a5);
+}
+
+.site-footer__links {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
 }
 
-.footer-menu a {
-  color: var(--a3);
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
+.site-footer__links a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  color: var(--a5);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.footer-horarios {
-  color: var(--g5);
-  font-weight: 500;
+@media (hover: hover) {
+  .site-footer__links a:hover,
+  .site-footer__credit a:hover {
+    color: var(--a2);
+  }
 }
 
-.copyright {
-  font-size: 75%;
-  color: var(--g8);
+@media (min-width: 48rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 2rem;
+    padding-block: 2.5rem;
+  }
+
+  .site-footer__links {
+    justify-content: end;
+  }
 }

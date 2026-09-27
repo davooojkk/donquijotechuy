@@ -18,38 +18,68 @@ export const deliveryData = {
           { nombre: "Muzzarella con Atún", medioMetro: 600 },
           { nombre: "Muzzarella con Sardina", medioMetro: 600 },
           { nombre: "Muzzarella a la Provenzal", medioMetro: 600 },
-          { nombre: "Del Monte (palmito, aceitunas)", medioMetro: 600 },
-          { nombre: "Primavera (choclo, jamón)", medioMetro: 600 },
-          { nombre: "Marea (atún, cebolla)", medioMetro: 600 },
-          { nombre: "Napolitana (jamón, tomate)", medioMetro: 600 },
+          {
+            nombre: "Del Monte",
+            descripcion: "Palmito y aceitunas.",
+            medioMetro: 600,
+          },
+          {
+            nombre: "Primavera",
+            descripcion: "Choclo y jamón.",
+            medioMetro: 600,
+          },
+          {
+            nombre: "Marea",
+            descripcion: "Atún y cebolla.",
+            medioMetro: 600,
+          },
+          {
+            nombre: "Napolitana",
+            descripcion: "Jamón y tomate.",
+            medioMetro: 600,
+          },
         ],
       },
       Especiales: {
         items: [
           { nombre: "Muzzarella 4 Quesos", medioMetro: 680 },
           { nombre: "Muzzarella con Roquefort", medioMetro: 680 },
-          { nombre: "Norteña (panceta, jamón, huevo cocido)", medioMetro: 680 },
+          {
+            nombre: "Norteña",
+            descripcion: "Panceta, jamón y huevo cocido.",
+            medioMetro: 680,
+          },
           { nombre: "Pollo Catupiry", medioMetro: 680 },
           {
-            nombre: "Portuguesa (jamón, morrón, cebolla, aceitunas, huevo)",
+            nombre: "Portuguesa",
+            descripcion: "Jamón, morrón, cebolla, aceitunas y huevo.",
             medioMetro: 680,
           },
           { nombre: "Rúcula y Tomate", medioMetro: 680 },
-          { nombre: "Gauchita (panceta, queso catupiry)", medioMetro: 680 },
           {
-            nombre: "Vegetariana (rúcula, tomate, palmito, morrón)",
+            nombre: "Gauchita",
+            descripcion: "Panceta y queso Catupiry.",
+            medioMetro: 680,
+          },
+          {
+            nombre: "Vegetariana",
+            descripcion: "Rúcula, tomate, palmito y morrón.",
             medioMetro: 680,
           },
           { nombre: "Muzzarella con Champiñones", medioMetro: 680 },
-          { nombre: "Granjera (panceta, cebolla, huevo cocido)", medioMetro: 680 },
+          {
+            nombre: "Granjera",
+            descripcion: "Panceta, cebolla y huevo cocido.",
+            medioMetro: 680,
+          },
         ],
       },
       "Súper Especiales": {
         items: [
           { nombre: "Muzzarella con Camarón", medioMetro: 750 },
           {
-            nombre:
-              "Muzzarella Don Quijote (jamón, aceitunas, panceta, huevo frito, morrón rojo)",
+            nombre: "Muzzarella Don Quijote",
+            descripcion: "Jamón, aceitunas, panceta, huevo frito y morrón rojo.",
             medioMetro: 750,
           },
         ],
@@ -62,15 +92,28 @@ export const deliveryData = {
     subcategorias: {
       Individual: {
         items: [
-          { nombre: "Asado con Guarnición", precio: 500 },
-          { nombre: "Entrecot con Guarnición", precio: 600 },
+          {
+            nombre: "Asado",
+            descripcion: "Acompañado de guarnición.",
+            precio: 500,
+          },
+          {
+            nombre: "Entrecot",
+            descripcion: "Acompañado de guarnición.",
+            precio: 600,
+          },
           { nombre: "Entrecot con 'Champi'", precio: 650 },
           { nombre: "Entrecot con Pimienta", precio: 650 },
           { nombre: "Entrecot con Mostaza", precio: 650 },
-          { nombre: "Muslo con Guarnición", precio: 400 },
           {
-            nombre:
-              "Entrecot para Uno: Rusa, Mixta, arroz, Jamón, Huevo, Muzzarella y papas",
+            nombre: "Muslo",
+            descripcion: "Acompañado de guarnición.",
+            precio: 400,
+          },
+          {
+            nombre: "Entrecot para Uno",
+            descripcion:
+              "Incluye ensaladas rusa y mixta, arroz, jamón, huevo, muzzarella y papas.",
             precio: 700,
           },
           { nombre: "Entrecot a la Pizza", precio: 650 },
@@ -79,18 +122,21 @@ export const deliveryData = {
       "Para Compartir": {
         items: [
           {
-            nombre:
-              "Entrecot para Dos: Rusa, Mixta, arroz, Jamón, Huevo, Muzzarella y papas",
+            nombre: "Entrecot para Dos",
+            descripcion:
+              "Incluye ensaladas rusa y mixta, arroz, jamón, huevo, muzzarella y papas.",
             precio: 1300,
           },
           {
-            nombre:
-              "Brasero para Dos: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulín, Riñón, papa, cebolla, morcilla",
+            nombre: "Brasero para Dos",
+            descripcion:
+              "Asado, entrecot, chorizo, salchicha, morrón al ajillo, chinchulín, riñón, papa, cebolla y morcilla.",
             precio: 1800,
           },
           {
-            nombre:
-              "Brasero para Cuatro: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulín, Riñón, papa, cebolla, morcilla",
+            nombre: "Brasero para Cuatro",
+            descripcion:
+              "Asado, entrecot, chorizo, salchicha, morrón al ajillo, chinchulín, riñón, papa, cebolla y morcilla.",
             precio: 2700,
           },
         ],
@@ -104,13 +150,19 @@ export const deliveryData = {
       { nombre: "Miniatura de Pescado", precio: 400 },
       { nombre: "Mejillones con arroz", precio: 550 },
       { nombre: "Milanesa de Pescado", precio: 480 },
-      { nombre: "Lenguado a la plancha con guarnición", precio: 550 },
       {
-        nombre: "Salmón a la plancha (manteca y alcaparras o al limón)",
+        nombre: "Lenguado a la Plancha",
+        descripcion: "Acompañado de guarnición.",
+        precio: 550,
+      },
+      {
+        nombre: "Salmón a la Plancha",
+        descripcion: "Preparado con manteca y alcaparras o al limón.",
         precio: 750,
       },
       {
-        nombre: "Cazón a la plancha con guarnición",
+        nombre: "Cazón a la Plancha",
+        descripcion: "Acompañado de guarnición.",
         precio: 500,
       },
     ],
@@ -142,13 +194,18 @@ export const deliveryData = {
       { nombre: "Baurú Carne o Pollo", precio: 250 },
       { nombre: "Baurú Pancho", precio: 280 },
       {
-        nombre:
-          "Baurú Don Quijote: Mayonesa, Ketchup, Mostaza, Lechuga, Tomate, Choclo, Arvejas, Jamón, Queso, Huevo, Carne, Pollo, Calabresa, Panceta.",
+        nombre: "Baurú Don Quijote",
+        descripcion:
+          "Mayonesa, kétchup, mostaza, lechuga, tomate, choclo, arvejas, jamón, queso, huevo, carne, pollo, calabresa y panceta.",
         precio: 330,
       },
       { nombre: "Baurú Calabresa", precio: 280 },
       { nombre: "Baurú Corazón de Pollo", precio: 300 },
-      { nombre: "Porción de Fritas acompañante al Baurú", precio: 50 },
+      {
+        nombre: "Porción de Fritas",
+        descripcion: "Acompañamiento para el Baurú.",
+        precio: 50,
+      },
     ],
   },
   PASTAS: {
@@ -179,21 +236,42 @@ export const deliveryData = {
         items: [
           { nombre: "Hamburguesa al Pan", precio: 350 },
           { nombre: "Hamburguesa Completa", precio: 370 },
-          { nombre: "Hamburguesa Completa (Con Fritas)", precio: 420 },
-          { nombre: "Hamburguesa Kids (Con Fritas)", precio: 280 },
+          {
+            nombre: "Hamburguesa Completa",
+            descripcion: "Acompañada de papas fritas.",
+            precio: 420,
+          },
+          {
+            nombre: "Hamburguesa Kids",
+            descripcion: "Acompañada de papas fritas.",
+            precio: 280,
+          },
         ],
       },
       Milanesas: {
         items: [
-          { nombre: "Napolitana con Guarnición", precio: 450 },
-          { nombre: "Napolitana para Dos con Guarnición", precio: 880 },
           {
-            nombre: "Milanesa (carne o pollo) con Guarnición",
+            nombre: "Milanesa Napolitana",
+            descripcion: "Acompañada de guarnición.",
+            precio: 450,
+          },
+          {
+            nombre: "Milanesa Napolitana",
+            descripcion: "Para 2 personas. Acompañada de guarnición.",
+            precio: 880,
+          },
+          {
+            nombre: "Milanesa",
+            descripcion: "A elección: carne o pollo. Acompañada de guarnición.",
             precio: 380,
           },
           { nombre: "Milanesa al Pan", precio: 380 },
           { nombre: "Milanesa al Pan Completa", precio: 400 },
-          { nombre: "Milanesa al Pan Completa (Con Fritas)", precio: 450 },
+          {
+            nombre: "Milanesa al Pan Completa",
+            descripcion: "Acompañada de papas fritas.",
+            precio: 450,
+          },
         ],
       },
       Chivitos: {
@@ -201,13 +279,15 @@ export const deliveryData = {
           { nombre: "Chivito al pan", precio: 350 },
           { nombre: "Chivito Canadiense", precio: 480 },
           {
-            nombre:
-              "Chivito Para Uno (Rusa, Mixta, Queso, Jamón, Panceta, Huevo, Muzzarella y fritas)",
+            nombre: "Chivito para Uno",
+            descripcion:
+              "Incluye ensaladas rusa y mixta, queso, jamón, panceta, huevo, muzzarella y papas fritas.",
             precio: 480,
           },
           {
-            nombre:
-              "Chivito Para Dos (Rusa, Mixta, Queso, Jamón, Panceta, Huevo, Muzzarella y fritas)",
+            nombre: "Chivito para Dos",
+            descripcion:
+              "Incluye ensaladas rusa y mixta, queso, jamón, panceta, huevo, muzzarella y papas fritas.",
             precio: 900,
           },
         ],
@@ -221,9 +301,17 @@ export const deliveryData = {
       },
       Otros: {
         items: [
-          { nombre: "Nuggets con Papas Fritas", precio: 350 },
+          {
+            nombre: "Nuggets",
+            descripcion: "Acompañados de papas fritas.",
+            precio: 350,
+          },
           { nombre: "Gramajo", precio: 400 },
-          { nombre: "Pollo con Guarnición", precio: 400 },
+          {
+            nombre: "Pollo",
+            descripcion: "Acompañado de guarnición.",
+            precio: 400,
+          },
         ],
       },
     },
@@ -249,7 +337,11 @@ export const deliveryData = {
       { nombre: "Ensalada Primavera", precio: 400 },
       { nombre: "Rúcula y Tomate", precio: 240 },
       { nombre: "Palmito, Zanahoria y Remolacha", precio: 280 },
-      { nombre: "Ensalada mixta: Lechuga y tomate", precio: 180 },
+      {
+        nombre: "Ensalada Mixta",
+        descripcion: "Lechuga y tomate.",
+        precio: 180,
+      },
       { nombre: "Ensalada Rusa", precio: 200 },
     ],
   },

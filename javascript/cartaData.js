@@ -18,44 +18,73 @@ export const cartaData = {
           { nombre: "Muzzarella con Sardina", medioMetro: 770, porcion: 440 },
           { nombre: "Muzzarella a la Provenzal", medioMetro: 770, porcion: 440 },
           {
-            nombre: "Del Monte (palmito, aceitunas)",
+            nombre: "Del Monte",
+            descripcion: "Palmito y aceitunas.",
             medioMetro: 770,
             porcion: 440,
           },
-          { nombre: "Primavera (choclo, jamón)", medioMetro: 770, porcion: 440 },
-          { nombre: "Marea (atún, cebolla)", medioMetro: 770, porcion: 440 },
-          { nombre: "Napolitana (jamón, tomate)", medioMetro: 770, porcion: 440 },
+          {
+            nombre: "Primavera",
+            descripcion: "Choclo y jamón.",
+            medioMetro: 770,
+            porcion: 440,
+          },
+          {
+            nombre: "Marea",
+            descripcion: "Atún y cebolla.",
+            medioMetro: 770,
+            porcion: 440,
+          },
+          {
+            nombre: "Napolitana",
+            descripcion: "Jamón y tomate.",
+            medioMetro: 770,
+            porcion: 440,
+          },
         ],
       },
 
       Especiales: {
         items: [
           {
-            nombre:
-              "Muzzarella Don Quijote (jamón, aceitunas, panceta, huevo frito, morrón rojo)",
+            nombre: "Muzzarella Don Quijote",
+            descripcion: "Jamón, aceitunas, panceta, huevo frito y morrón rojo.",
             medioMetro: 910,
             porcion: 540,
           },
           { nombre: "Muzzarella Cuatro Quesos", medioMetro: 870, porcion: 500 },
           { nombre: "Muzzarella Roquefort", medioMetro: 870, porcion: 500 },
-          { nombre: "Norteña", medioMetro: 870, porcion: 500 },
+          {
+            nombre: "Norteña",
+            descripcion: "Panceta, jamón y huevo cocido.",
+            medioMetro: 870,
+            porcion: 500,
+          },
           { nombre: "Pollo Catupiry", medioMetro: 870, porcion: 500 },
-          { nombre: "Portuguesa", medioMetro: 870, porcion: 500 },
+          {
+            nombre: "Portuguesa",
+            descripcion: "Jamón, morrón, cebolla, aceitunas y huevo.",
+            medioMetro: 870,
+            porcion: 500,
+          },
           { nombre: "Rúcula y Tomate", medioMetro: 870, porcion: 500 },
           {
-            nombre: "Gauchita (Panceta + Queso Catupiry)",
+            nombre: "Gauchita",
+            descripcion: "Panceta y queso Catupiry.",
             medioMetro: 870,
             porcion: 500,
           },
           { nombre: "Muzzarella con Camarón", medioMetro: 870, porcion: 500 },
           {
-            nombre: "Vegetariana (Rúcula + Tomate + Palmito + Morrón)",
+            nombre: "Vegetariana",
+            descripcion: "Rúcula, tomate, palmito y morrón.",
             medioMetro: 870,
             porcion: 500,
           },
           { nombre: "Muzzarella con Champiñones", medioMetro: 870, porcion: 500 },
           {
-            nombre: "Granjera (Panceta + Cebolla + Huevo Cocido)",
+            nombre: "Granjera",
+            descripcion: "Panceta, cebolla y huevo cocido.",
             medioMetro: 870,
             porcion: 500,
           },
@@ -75,8 +104,12 @@ export const cartaData = {
           { nombre: "Asado de Tira", precio: 730 },
           { nombre: "Entrecot Mariposa", precio: 830 },
           { nombre: "Vacío", precio: 790 },
-          { nombre: "Pollo a las brasas (porción)", precio: 440 },
-          { nombre: "Pamplona con guarnición", precio: 570 },
+          { nombre: "Pollo a las Brasas", descripcion: "Porción.", precio: 440 },
+          {
+            nombre: "Pamplona",
+            descripcion: "Acompañada de guarnición.",
+            precio: 570,
+          },
         ],
       },
 
@@ -86,7 +119,7 @@ export const cartaData = {
           { nombre: "Salchicha Parrillera Cativelli", precio: 330 },
           { nombre: "Morcilla Cativelli", precio: 260 },
           { nombre: "Chinchulín", precio: 320 },
-          { nombre: "Riñón Natural (de ternera)", precio: 320 },
+          { nombre: "Riñón Natural", descripcion: "De ternera.", precio: 320 },
         ],
       },
 
@@ -106,8 +139,16 @@ export const cartaData = {
 
       "Para Compartir": {
         items: [
-          { nombre: 'Brasero "Don Quijote" (para 2 personas)', precio: 2250 },
-          { nombre: 'Brasero "Don Quijote" (para 4 personas)', precio: 3250 },
+          {
+            nombre: 'Brasero "Don Quijote"',
+            descripcion: "Para 2 personas.",
+            precio: 2250,
+          },
+          {
+            nombre: 'Brasero "Don Quijote"',
+            descripcion: "Para 4 personas.",
+            precio: 3250,
+          },
         ],
       },
     },
@@ -134,10 +175,19 @@ export const cartaData = {
         items: [
           {
             nombre: "Sorrentinos de Jamón y Queso",
-            precio: "650 + una salsa elegible",
+            descripcion: "Incluye una salsa a elección.",
+            precio: 650,
           },
-          { nombre: "Raviolones de Verduras", precio: "620 + salsa elegible" },
-          { nombre: "Espagueti", precio: "510 + salsa elegible" },
+          {
+            nombre: "Raviolones de Verduras",
+            descripcion: "Incluye una salsa a elección.",
+            precio: 620,
+          },
+          {
+            nombre: "Espagueti",
+            descripcion: "Incluye una salsa a elección.",
+            precio: 510,
+          },
         ],
       },
 
@@ -166,35 +216,104 @@ export const cartaData = {
       { nombre: "Pancho Común", precio: 200 },
       { nombre: "Pancho con Panceta", precio: 230 },
       { nombre: "Pancho con Muzzarella", precio: 230 },
-      { nombre: "Pancho Completo Panceta y Muzzarella", precio: 270 },
+      {
+        nombre: "Pancho Completo",
+        descripcion: "Panceta y muzzarella.",
+        precio: 270,
+      },
 
-      { nombre: "Milanesa de Ternera con Fritas", precio: 540 },
-      { nombre: "Milanesa Napolitana con fritas", precio: 660 },
-      { nombre: "Milanesa Napolitana para 2 con fritas", precio: 1200 },
-      { nombre: "Milanesa de Pollo con fritas", precio: 540 },
+      {
+        nombre: "Milanesa de Ternera",
+        descripcion: "Acompañada de papas fritas.",
+        precio: 540,
+      },
+      {
+        nombre: "Milanesa Napolitana",
+        descripcion: "Acompañada de papas fritas.",
+        precio: 660,
+      },
+      {
+        nombre: "Milanesa Napolitana",
+        descripcion: "Para 2 personas. Acompañada de papas fritas.",
+        precio: 1200,
+      },
+      {
+        nombre: "Milanesa de Pollo",
+        descripcion: "Acompañada de papas fritas.",
+        precio: 540,
+      },
       { nombre: "Milanesa Americana", precio: 720 },
 
       {
-        nombre: "Entrecot a la crema de champiñones con papas cuña",
+        nombre: "Entrecot a la Crema de Champiñones",
+        descripcion: "Acompañado de papas cuña.",
         precio: 750,
       },
-      { nombre: "Entrecot a la Mostaza con Papas Cuña", precio: 750 },
-      { nombre: "Entrecot a las 4 Pimientas con Papas Cuña", precio: 750 },
+      {
+        nombre: "Entrecot a la Mostaza",
+        descripcion: "Acompañado de papas cuña.",
+        precio: 750,
+      },
+      {
+        nombre: "Entrecot a las 4 Pimientas",
+        descripcion: "Acompañado de papas cuña.",
+        precio: 750,
+      },
 
-      { nombre: "Entrecot Don Quijote para 1 persona", precio: 830 },
-      { nombre: "Entrecot Don Quijote para 2 personas", precio: 1600 },
+      {
+        nombre: "Entrecot Don Quijote",
+        descripcion: "Para 1 persona.",
+        precio: 830,
+      },
+      {
+        nombre: "Entrecot Don Quijote",
+        descripcion: "Para 2 personas.",
+        precio: 1600,
+      },
 
-      { nombre: "Chivito al Plato (carne o pollo)", precio: 660 },
-      { nombre: "Chivito al Plato para 2 personas", precio: 1200 },
-      { nombre: "Chivito Canadiense (al pan)", precio: 660 },
+      {
+        nombre: "Chivito al Plato",
+        descripcion: "A elección: carne o pollo.",
+        precio: 660,
+      },
+      {
+        nombre: "Chivito al Plato",
+        descripcion: "Para 2 personas.",
+        precio: 1200,
+      },
+      { nombre: "Chivito Canadiense", descripcion: "Al pan.", precio: 660 },
 
-      { nombre: "Pollo a la Crema de Mostaza con cuñas", precio: 540 },
-      { nombre: "Pollo a la Crema de Limón con Papas Cuña", precio: 540 },
-      { nombre: "Suprema a la Plancha con guarnición", precio: 460 },
+      {
+        nombre: "Pollo a la Crema de Mostaza",
+        descripcion: "Acompañado de papas cuña.",
+        precio: 540,
+      },
+      {
+        nombre: "Pollo a la Crema de Limón",
+        descripcion: "Acompañado de papas cuña.",
+        precio: 540,
+      },
+      {
+        nombre: "Suprema a la Plancha",
+        descripcion: "Acompañada de guarnición.",
+        precio: 460,
+      },
 
-      { nombre: "Hamburguesa 'Don Quijote' al Plato", precio: 550 },
-      { nombre: "Hamburguesa al Plato con Fritas", precio: 420 },
-      { nombre: "Hamburguesa casera al pan con fritas completa", precio: 550 },
+      {
+        nombre: "Hamburguesa 'Don Quijote'",
+        descripcion: "Servida al plato.",
+        precio: 550,
+      },
+      {
+        nombre: "Hamburguesa al Plato",
+        descripcion: "Acompañada de papas fritas.",
+        precio: 420,
+      },
+      {
+        nombre: "Hamburguesa Casera Completa",
+        descripcion: "Al pan, acompañada de papas fritas.",
+        precio: 550,
+      },
 
       { nombre: "Tortilla de papa con Cebolla", precio: 450 },
       { nombre: "Tortilla Española", precio: 520 },
@@ -212,9 +331,17 @@ export const cartaData = {
       },
       Pescados: {
         items: [
-          { nombre: "Cazón a la Plancha (con papas cuñas)", precio: 650 },
+          {
+            nombre: "Cazón a la Plancha",
+            descripcion: "Acompañado de papas cuña.",
+            precio: 650,
+          },
           { nombre: "Cazón a la Crema Roquefort", precio: 720 },
-          { nombre: "Milanesa de Pescado (con papas cuñas)", precio: 650 },
+          {
+            nombre: "Milanesa de Pescado",
+            descripcion: "Acompañada de papas cuña.",
+            precio: 650,
+          },
           { nombre: "Salmón a la Manteca y Alcaparras", precio: 860 },
           { nombre: "Salmón a la crema de Limón", precio: 860 },
           { nombre: "Lenguado a la Plancha", precio: 660 },
@@ -243,7 +370,7 @@ export const cartaData = {
         nombre: "'Don Quijote'",
         precio: 490,
         descripcion:
-          "(lechuga, tomate, zanahoria, morrón, aceitunas, palmitos, huevos, cebolla, pepinos)",
+          "Lechuga, tomate, zanahoria, morrón, aceitunas, palmitos, huevos, cebolla y pepinos.",
       },
       { nombre: "Mixta", precio: 230 },
       { nombre: "Mixta con Cebolla", precio: 250 },
@@ -257,10 +384,14 @@ export const cartaData = {
       { nombre: "César", precio: 520 },
       { nombre: "Primavera", precio: 520 },
       { nombre: "Vegetales Salteados", precio: 350 },
-      { nombre: "Ensalada Verde (Miel y Mostaza)", precio: 430 },
+      {
+        nombre: "Ensalada Verde",
+        descripcion: "Con aderezo de miel y mostaza.",
+        precio: 430,
+      },
       {
         nombre: "Ensalada de Camarón",
-        descripcion: "(lechuga, tomate cherry, rúcula, pepino, naranja, camarones)",
+        descripcion: "Lechuga, tomate cherry, rúcula, pepino, naranja y camarones.",
         precio: 620,
       },
     ],
@@ -286,17 +417,25 @@ export const cartaData = {
     subcategorias: {
       Caseros: {
         items: [
-          { nombre: "Flan de Leche o Coco naturales", precio: 210 },
+          {
+            nombre: "Flan Natural",
+            descripcion: "De leche o coco.",
+            precio: 210,
+          },
           { nombre: 'Flan con Dulce de Leche "Conaprole"', precio: 230 },
           { nombre: "Príncipe Humberto", precio: 250 },
-          { nombre: "Torta 3x3 (Helada)", precio: 250 },
-          { nombre: "Torta Romana (Helada)", precio: 250 },
+          { nombre: "Torta 3x3", descripcion: "Helada.", precio: 250 },
+          { nombre: "Torta Romana", descripcion: "Helada.", precio: 250 },
         ],
       },
 
       "Helados Crufi": {
         items: [
-          { nombre: "Crufi Max 0% Azúcar dietético", precio: 150 },
+          {
+            nombre: "Crufi Max",
+            descripcion: "Dietético, 0 % azúcar.",
+            precio: 150,
+          },
           { nombre: "Casatas Triples", precio: 170 },
           { nombre: "Casatas Mixta Chicas", precio: 150 },
           { nombre: "Barritas Crufi Max", precio: 150 },
@@ -323,7 +462,11 @@ export const cartaData = {
           { nombre: "Don Pascual Brut Blanc de Blancs", precio: 670 },
           { nombre: "Don Pascual Brut de Noir", precio: 670 },
           { nombre: "Don Pascual Chardonnay Viognier", precio: 770 },
-          { nombre: "Don Pascual Clásicos (Chicos, Tintos)", precio: 440 },
+          {
+            nombre: "Don Pascual Clásicos",
+            descripcion: "Botellas chicas, tintos.",
+            precio: 440,
+          },
           { nombre: "Medio y Medio Roldos", precio: 560 },
         ],
       },
@@ -348,7 +491,11 @@ export const cartaData = {
         items: [
           { nombre: "Reservado Carmenere", precio: 720 },
           { nombre: "Reservado Cabernet Sauvignon", precio: 720 },
-          { nombre: "Casillero del Diablo (Cabernet / Carmenere)", precio: 780 },
+          {
+            nombre: "Casillero del Diablo",
+            descripcion: "Variedades Cabernet o Carmenere.",
+            precio: 780,
+          },
         ],
       },
 
@@ -374,7 +521,11 @@ export const cartaData = {
       Refrescos: {
         items: [
           { nombre: "Refrescos línea Pepsi Cola 500ml", precio: 140 },
-          { nombre: "Agua mineral Salus 1L (con o sin gas)", precio: 140 },
+          {
+            nombre: "Agua Mineral Salus 1 L",
+            descripcion: "Con o sin gas.",
+            precio: 140,
+          },
           { nombre: "Agua saborizada Salus 600ml", precio: 140 },
           { nombre: "Jugo de naranja natural", precio: 200 },
         ],
@@ -383,7 +534,11 @@ export const cartaData = {
       Cervezas: {
         items: [
           { nombre: "Cerveza Pilsen o Patricia 1L", precio: 350 },
-          { nombre: "Cerveza Zillertal o Stella Artois 1L", precio: 380 },
+          {
+            nombre: "Cerveza 1 L",
+            descripcion: "Zillertal o Stella Artois.",
+            precio: 380,
+          },
           { nombre: "Cervezas chicas 330ml", precio: 170 },
           { nombre: "Stella Artois sin alcohol", precio: 220 },
         ],

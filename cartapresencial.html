@@ -2,106 +2,112 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Carta presencial completa de Don Quijote Restaurant: parrilla, pizzas, pastas, bebidas y más."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.min.css" />
     <link rel="icon" href="./img/icons/donquijote-logo.ico" type="image/x-icon" />
-
-    <title>Don Quijote Restaurant - Presencial</title>
+    <title>Don Quijote Restaurant - Carta presencial</title>
   </head>
 
   <body>
-    <div class="mobile container">
-      <header class="header container">
-        <nav>
-          <ul class="cta header-menu">
-            <li>
-              <a
-                href="https://www.instagram.com/parrilladadonquijote?igsh=cjRuMTdtNW94enk0"
-                >instagram</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/59899764857?text=Hola%2C%20vengo%20desde%20el%20Men%C3%BA%20Digital%20de%20Don%20Quijote%2C%20me%20gustar%C3%ADa%20hablar%20con%20ustedes"
-                >whatsapp</a
-              >
-            </li>
-            <li>
-              <a href="https://maps.app.goo.gl/8VuwacE47hJgdb7s6">dirección</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="marca">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="site-header__inner page-shell">
+        <a class="brand" href="./index.html" aria-label="Don Quijote Restaurant, inicio">
           <img
-            class="logo"
-            src="./img/icons/donquijote-logo.svg"
-            alt="Logo de Don Quijote Restaurant"
+            class="brand__logo"
+            src="./img/icons/donquijote-logo.ico"
+            width="48"
+            height="48"
+            alt=""
           />
-          <p class="titulos">Don Quijote Restaurant</p>
-        </div>
-      </header>
+          <span class="brand__copy">
+            <span class="brand__name">Don Quijote</span>
+            <span class="brand__type">Restaurant</span>
+          </span>
+        </a>
 
-      <main class="layout container">
-        <section class="carta" id="carta"></section>
-
-        <aside class="galeria-comida"></aside>
-      </main>
-
-      <footer class="footer">
-        <span class="body-text davotech"
-          >diseño y desarrollo por
-          <a href="https://www.instagram.com/davotech.uy/">@davotech.uy</a></span
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Abrir menú"
         >
-        <nav>
-          <ul class="cta footer-menu container">
-            <li>
-              <a
-                href="https://www.instagram.com/parrilladadonquijote?igsh=cjRuMTdtNW94enk0"
-                >instagram <img src="./img/icons/instagram.svg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/59899764857?text=Hola%2C%20vengo%20desde%20el%20Men%C3%BA%20Digital%20de%20Don%20Quijote%2C%20me%20gustar%C3%ADa%20hablar%20con%20ustedes"
-                >whatsapp <img src="./img/icons/whatsapp.svg" alt=""
-              /></a>
-            </li>
-            <li>
-              <a href="https://maps.app.goo.gl/8VuwacE47hJgdb7s6"
-                >dirección<img src="./img/icons/direccion.svg" alt=""
-              /></a>
-            </li>
-          </ul>
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" aria-label="Navegación principal">
+          <a href="./index.html">Inicio</a>
+          <a href="./cartapresencial.html" aria-current="page">Carta</a>
+          <a href="./cartadelivery.html">Delivery</a>
+          <a href="./index.html#horarios">Horarios</a>
         </nav>
-        <p class="body-text footer-horarios">Los esperamos de 09:00 a 00:00 h</p>
-        <img
-          src="./img/icons/donquijote-contexto.svg"
-          alt="Logo de Don Quijote Restaurant"
-        />
-        <span class="cta copyright">todos los derechos reservados.</span>
-      </footer>
-    </div>
 
-    <section class="warning">
-      <p class="titulos">
-        Esta página web no posee servicios para dispositivos de escritorio.
-      </p>
-      <p class="body-text">
-        Agradecemos su comprensión y le solicitamos por favor que acceda a nuestros
-        servicios mediante un dispositivo móvil. Gracias.
-      </p>
-      <img
-        src="./img/icons/donquijote-contexto.svg"
-        alt="Logo de Don Quijote Restaurant"
-      />
-    </section>
+      </div>
+    </header>
 
+    <main id="contenido">
+      <section class="menu-hero">
+        <div class="menu-hero__inner page-shell">
+          <p class="eyebrow">En el restaurante</p>
+          <h1>Carta presencial</h1>
+          <p>
+            Explorá todos nuestros platos por categorías y encontrá rápidamente
+            lo que querés disfrutar.
+          </p>
+        </div>
+      </section>
+
+      <section class="category-bar" aria-label="Categorías de la carta">
+        <div class="category-bar__inner page-shell" id="categorias"></div>
+      </section>
+
+      <div class="menu-layout page-shell">
+        <aside class="menu-summary menu-summary--static">
+          <p class="eyebrow">Carta completa</p>
+          <h2>Elegí con calma</h2>
+          <p>
+            Todos los platos del local, con precios claros y categorías siempre a mano.
+            Si necesitás ayuda, consultá a nuestro personal.
+          </p>
+        </aside>
+
+        <section class="carta" id="carta" aria-live="polite" aria-busy="true">
+          <noscript>
+            <p class="menu-error">Necesitás activar JavaScript para visualizar la carta.</p>
+          </noscript>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner page-shell">
+        <div>
+          <p class="site-footer__brand">Don Quijote Restaurant</p>
+          <p class="site-footer__credit">
+            Diseño y desarrollo por
+            <a href="https://www.instagram.com/davotech.uy/">@davotech.uy</a>
+          </p>
+        </div>
+        <nav class="site-footer__links" aria-label="Redes sociales y contacto">
+          <a href="https://www.instagram.com/parrilladadonquijote?igsh=cjRuMTdtNW94enk0">Instagram</a>
+          <a href="https://maps.app.goo.gl/8VuwacE47hJgdb7s6">Dirección</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./javascript/site.js" defer></script>
     <script type="module" src="./javascript/script1.js"></script>
   </body>
 </html>
