@@ -26,13 +26,25 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  width: calc(100% - 1rem);
   margin-bottom: 1.2rem;
+  border: 0;
   cursor: pointer;
   padding: 1rem;
   margin-right: 1rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.categoria-header:focus-visible {
+  outline: 3px solid var(--a6);
+  outline-offset: -3px;
 }
 
 .flecha {
+  flex: 0 0 auto;
   transition: 0.3s;
 }
 

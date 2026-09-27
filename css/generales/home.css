@@ -50,7 +50,7 @@
   transition: .3s;
 }
 
-.opcion.prs a {
+.opcion.prs {
   color: var(--g11);
 }
 
@@ -59,7 +59,7 @@
   transition: .3s;
 }
 
-.opcion.dlv a {
+.opcion.dlv {
   color: var(--a3);
 }
 

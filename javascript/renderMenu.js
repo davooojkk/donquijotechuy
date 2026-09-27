@@ -4,19 +4,26 @@ export function renderMenu() {
   const nombresAmigables = {
     MARISCOSYPESCADOS: "Mariscos y Pescados",
     MENUKIDS: "Menú Kids",
+    CAFETERIA: "Cafetería",
   };
 
   const menuContainer = document.getElementById("carta");
-  menuContainer.innerHTML = "";
+  if (!menuContainer) return;
+
+  menuContainer.replaceChildren();
 
   Object.entries(cartaData).forEach(([categoriaNombre, categoriaData]) => {
     const categoria = document.createElement("section");
+    const categoriaId = `categoria-${categoriaNombre.toLowerCase()}`;
 
     // HEADER DE CATEGORIA
-    const header = document.createElement("div");
+    const header = document.createElement("button");
+    header.type = "button";
     header.classList.add("categoria-header");
+    header.setAttribute("aria-expanded", "false");
+    header.setAttribute("aria-controls", `${categoriaId}-contenido`);
 
-    const titulo = document.createElement("p");
+    const titulo = document.createElement("span");
     titulo.classList.add("titulos");
 
     titulo.textContent =
@@ -25,6 +32,8 @@ export function renderMenu() {
 
     const flecha = document.createElement("img");
     flecha.src = "./img/icons/flecha.svg";
+    flecha.alt = "";
+    flecha.setAttribute("aria-hidden", "true");
     flecha.classList.add("flecha");
 
     header.appendChild(titulo);
@@ -33,7 +42,8 @@ export function renderMenu() {
     // CONTENIDO OCULTO
     const contenido = document.createElement("div");
     contenido.classList.add("contenido-categoria");
-    contenido.style.display = "none";
+    contenido.id = `${categoriaId}-contenido`;
+    contenido.hidden = true;
 
     // LOGICA PARA ITEMS SIMPLES
     if (categoriaData.tipo === "simple") {
@@ -41,13 +51,21 @@ export function renderMenu() {
         if (!item.descripcion) {
           const plato = document.createElement("p");
           plato.classList.add("body-text");
-          plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
+          const precio =
+            item.precio != null
+              ? ` <br> <span class="precio">$${item.precio}</span>`
+              : "";
+          plato.innerHTML = `<span class="nombre">${item.nombre}</span>${precio}`;
 
           contenido.appendChild(plato);
         } else if (item.descripcion) {
           const plato = document.createElement("p");
           plato.classList.add("body-text");
-          plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="descripcion">${item.descripcion}</span> <br> <span class="precio">$${item.precio}</span>`;
+          const precio =
+            item.precio != null
+              ? ` <br> <span class="precio">$${item.precio}</span>`
+              : "";
+          plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> <span class="descripcion">${item.descripcion}</span>${precio}`;
 
           contenido.appendChild(plato);
         }
@@ -67,15 +85,15 @@ export function renderMenu() {
           const plato = document.createElement("p");
           plato.classList.add("body-text");
 
-          if (item.precio) {
-            plato.innerHTML = `<span class="nombre">${item.nombre}</span>  <br> <span class="precio">$${item.precio}</span>`;
-          }
-
-          if (item.medioMetro) {
-            plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2M: <span class="precio">$${item.medioMetro}</span> | Porción: <span class="precio">$${item.porcion}</span>`;
-          }
-
-          if (!item.precio && !item.medioMetro) {
+          if (item.medioMetro != null) {
+            const porcion =
+              item.porcion != null
+                ? ` | Porción: <span class="precio">$${item.porcion}</span>`
+                : "";
+            plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> 1/2 m: <span class="precio">$${item.medioMetro}</span>${porcion}`;
+          } else if (item.precio != null) {
+            plato.innerHTML = `<span class="nombre">${item.nombre}</span> <br> <span class="precio">$${item.precio}</span>`;
+          } else {
             plato.textContent = item.nombre;
           }
 
@@ -86,13 +104,10 @@ export function renderMenu() {
 
     // EVENTO PARA ABRIR / CERRAR
     header.addEventListener("click", () => {
-      if (contenido.style.display === "none") {
-        contenido.style.display = "block";
-        flecha.style.transform = "rotate(180deg)";
-      } else {
-        contenido.style.display = "none";
-        flecha.style.transform = "rotate(0deg)";
-      }
+      const estaAbierto = header.getAttribute("aria-expanded") === "true";
+      header.setAttribute("aria-expanded", String(!estaAbierto));
+      contenido.hidden = estaAbierto;
+      flecha.style.transform = estaAbierto ? "rotate(0deg)" : "rotate(180deg)";
     });
 
     categoria.appendChild(header);

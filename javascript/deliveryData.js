@@ -13,7 +13,7 @@ export const deliveryData = {
           { nombre: "Muzzarella con Morrón", medioMetro: 600 },
           { nombre: "Muzzarella con Cebolla", medioMetro: 600 },
           { nombre: "Muzzarella con Ajo", medioMetro: 600 },
-          { nombre: "Muzzarella con Calabreza", medioMetro: 600 },
+          { nombre: "Muzzarella con Calabresa", medioMetro: 600 },
           { nombre: "Muzzarella con Longaniza", medioMetro: 600 },
           { nombre: "Muzzarella con Atún", medioMetro: 600 },
           { nombre: "Muzzarella con Sardina", medioMetro: 600 },
@@ -27,24 +27,24 @@ export const deliveryData = {
       Especiales: {
         items: [
           { nombre: "Muzzarella 4 Quesos", medioMetro: 680 },
-          { nombre: "Muzzarella con Roqueford", medioMetro: 680 },
+          { nombre: "Muzzarella con Roquefort", medioMetro: 680 },
           { nombre: "Norteña (panceta, jamón, huevo cocido)", medioMetro: 680 },
           { nombre: "Pollo Catupiry", medioMetro: 680 },
           {
             nombre: "Portuguesa (jamón, morrón, cebolla, aceitunas, huevo)",
             medioMetro: 680,
           },
-          { nombre: "Rucula y Tomate", medioMetro: 680 },
+          { nombre: "Rúcula y Tomate", medioMetro: 680 },
           { nombre: "Gauchita (panceta, queso catupiry)", medioMetro: 680 },
           {
-            nombre: "Vegetariana (rucula, tomate, palmito, morrón)",
+            nombre: "Vegetariana (rúcula, tomate, palmito, morrón)",
             medioMetro: 680,
           },
-          { nombre: "Muzzarella con Champignon", medioMetro: 680 },
+          { nombre: "Muzzarella con Champiñones", medioMetro: 680 },
           { nombre: "Granjera (panceta, cebolla, huevo cocido)", medioMetro: 680 },
         ],
       },
-      "Super Especiales": {
+      "Súper Especiales": {
         items: [
           { nombre: "Muzzarella con Camarón", medioMetro: 750 },
           {
@@ -85,12 +85,12 @@ export const deliveryData = {
           },
           {
             nombre:
-              "Brasero para Dos: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulin, Riñon, papa, cebolla, morcilla",
+              "Brasero para Dos: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulín, Riñón, papa, cebolla, morcilla",
             precio: 1800,
           },
           {
             nombre:
-              "Brasero para Cuatro: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulin, Riñon, papa, cebolla, morcilla",
+              "Brasero para Cuatro: Asado, Entrecot, Chorizo, Salchicha, Morrón al ajillo, Chinchulín, Riñón, papa, cebolla, morcilla",
             precio: 2700,
           },
         ],
@@ -118,12 +118,12 @@ export const deliveryData = {
   SANDWICH: {
     tipo: "simple",
     items: [
-      { nombre: "Sandwich Frío", precio: 180 },
-      { nombre: "Sandwich Caliente", precio: 200 },
-      { nombre: "Sandwich Napolitano", precio: 280 },
-      { nombre: "Sandwich Olimpico", precio: 300 },
-      { nombre: "Sandwich con Muzzarella", precio: 250 },
-      { nombre: "Sandwich Don Quijote", precio: 350 },
+      { nombre: "Sándwich Frío", precio: 180 },
+      { nombre: "Sándwich Caliente", precio: 200 },
+      { nombre: "Sándwich Napolitano", precio: 280 },
+      { nombre: "Sándwich Olímpico", precio: 300 },
+      { nombre: "Sándwich con Muzzarella", precio: 250 },
+      { nombre: "Sándwich Don Quijote", precio: 350 },
     ],
   },
   PANCHOS: {
@@ -158,12 +158,12 @@ export const deliveryData = {
         items: [
           { nombre: "Sorrentinos", precio: 520 },
           { nombre: "Raviolones", precio: 500 },
-          { nombre: "Espaguetti", precio: 300 },
+          { nombre: "Espagueti", precio: 300 },
         ],
       },
       Salsas: {
         items: [
-          { nombre: "Bolognesa" },
+          { nombre: "Boloñesa" },
           { nombre: "Cuatro Quesos" },
           { nombre: "Caruso" },
           { nombre: "Fileto" },
@@ -244,10 +244,10 @@ export const deliveryData = {
     tipo: "simple",
     items: [
       { nombre: "Don Quijote", precio: 350 },
-      { nombre: "Ensalada Cesar", precio: 400 },
+      { nombre: "Ensalada César", precio: 400 },
       { nombre: "Remolacha y Zanahoria", precio: 230 },
       { nombre: "Ensalada Primavera", precio: 400 },
-      { nombre: "Rucula y Tomate", precio: 240 },
+      { nombre: "Rúcula y Tomate", precio: 240 },
       { nombre: "Palmito, Zanahoria y Remolacha", precio: 280 },
       { nombre: "Ensalada mixta: Lechuga y tomate", precio: 180 },
       { nombre: "Ensalada Rusa", precio: 200 },
@@ -260,7 +260,7 @@ export const deliveryData = {
       { nombre: "Zillertal Litro", precio: 280 },
       { nombre: "Stella Artois Litro", precio: 280 },
       { nombre: "Coca Cola 2L", precio: 120 },
-      { nombre: "Refresco Linea Pepsi 600ml", precio: 80 },
+      { nombre: "Refresco Línea Pepsi 600ml", precio: 80 },
       { nombre: "Agua Salus", precio: 60 },
       { nombre: "Salus Saborizada", precio: 70 },
     ],
@@ -272,7 +272,7 @@ export const deliveryData = {
       { nombre: "Flan", precio: 180 },
       { nombre: "Flan con Dulce", precio: 200 },
       { nombre: "Torta Ramona", precio: 230 },
-      { nombre: "Principe Humberto", precio: 230 },
+      { nombre: "Príncipe Humberto", precio: 230 },
     ],
   },
 };
