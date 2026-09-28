@@ -47,16 +47,3 @@
     color: var(--a2);
   }
 }
-
-@media (min-width: 48rem) {
-  .site-footer__inner {
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 2rem;
-    padding-block: 2.5rem;
-  }
-
-  .site-footer__links {
-    justify-content: end;
-  }
-}

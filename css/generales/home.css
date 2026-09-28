@@ -17,8 +17,12 @@
 }
 
 .hero h1 em {
-  color: #a97c00;
+  color: var(--g8);
   font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--a5);
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.1em;
 }
 
 .hero__lead {
@@ -50,7 +54,7 @@
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--a6);
-  box-shadow: 0 0 0 4px rgba(237, 174, 0, 0.17);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--a6) 17%, transparent);
 }
 
 .hero-gallery {
@@ -97,7 +101,7 @@
   gap: 0.75rem;
   padding: 0.7rem 0.85rem;
   border-radius: 0.45rem;
-  background: rgba(13, 13, 13, 0.84);
+  background: color-mix(in srgb, var(--g11) 84%, transparent);
   color: var(--surface);
   font-family: "Playfair Display", serif;
   font-size: 1.05rem;
@@ -123,15 +127,16 @@
   gap: 1.25rem;
   padding: clamp(1.25rem, 5vw, 2rem);
   border-radius: 0.8rem;
-  background: var(--g10);
+  background: var(--g9);
   color: var(--surface);
   transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color var(--motion-base) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard),
+    transform var(--motion-base) var(--ease-out);
 }
 
 .service-card .eyebrow {
-  color: #b68a00;
+  color: var(--a6);
 }
 
 .service-card strong {
@@ -158,11 +163,11 @@
 }
 
 .service-card--delivery .eyebrow {
-  color: #674f00;
+  color: var(--g8);
 }
 
 .service-card--delivery small {
-  color: #584500;
+  color: var(--g8);
 }
 
 .service-card__icon {
@@ -173,6 +178,7 @@
   place-items: center;
   border: 1px solid currentColor;
   border-radius: 50%;
+  transition: transform var(--motion-base) var(--ease-out);
 }
 
 .service-card__icon img {
@@ -248,13 +254,199 @@
   margin-top: 0.85rem;
 }
 
+.payment-section {
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.payment-section__inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.payment-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(1.35rem, 5vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: 0 18px 45px color-mix(in srgb, var(--g11) 7%, transparent);
+  transition:
+    border-color var(--motion-base) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard),
+    transform var(--motion-base) var(--ease-out);
+}
+
+.payment-card::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.22rem;
+  background: var(--a5);
+  content: "";
+}
+
+.payment-card__label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--g7);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.payment-card__label::before {
+  width: 1.5rem;
+  height: 2px;
+  flex: 0 0 auto;
+  background: var(--a6);
+  content: "";
+}
+
+.payment-card h2,
+.payment-card h3 {
+  max-width: 13ch;
+  margin-top: 1rem;
+  letter-spacing: -0.035em;
+}
+
+.payment-card h2 {
+  font-size: clamp(2.1rem, 9vw, 3.4rem);
+}
+
+.payment-card h3 {
+  font-size: clamp(1.9rem, 8vw, 2.8rem);
+}
+
+.payment-card__description {
+  max-width: 38rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.payment-method-list,
+.currency-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.payment-method-list li,
+.currency-item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: var(--paper);
+}
+
+.payment-method__icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--a5);
+}
+
+.payment-method__icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.payment-method__copy,
+.currency-item__copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.16rem;
+}
+
+.payment-method__copy strong,
+.currency-item__copy strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.payment-method__copy small,
+.currency-item__copy small {
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.45;
+}
+
+.payment-card--currencies {
+  border-color: var(--g10);
+  background: var(--g11);
+  color: var(--surface);
+  box-shadow: 0 22px 50px color-mix(in srgb, var(--g11) 16%, transparent);
+}
+
+.payment-card--currencies .payment-card__label {
+  color: var(--a5);
+}
+
+.payment-card--currencies .payment-card__description {
+  color: var(--g3);
+}
+
+.currency-item {
+  border-color: var(--g8);
+  background: var(--g10);
+}
+
+.currency-item__flag {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: 0 0 auto;
+  filter: drop-shadow(
+    0 4px 7px color-mix(in srgb, var(--g11) 24%, transparent)
+  );
+}
+
+.currency-item__copy small {
+  color: var(--g3);
+}
+
+@media (hover: hover) {
+  .payment-card:hover {
+    border-color: var(--g7);
+    box-shadow: 0 24px 54px color-mix(in srgb, var(--g11) 12%, transparent);
+    transform: translateY(-3px);
+  }
+
+  .payment-card--currencies:hover {
+    border-color: var(--a5);
+    box-shadow: 0 28px 58px color-mix(in srgb, var(--g11) 22%, transparent);
+  }
+}
+
 @media (hover: hover) {
   .service-card:hover {
+    box-shadow: 0 18px 34px color-mix(in srgb, var(--g11) 16%, transparent);
     transform: translateY(-4px);
   }
 
+  .service-card:hover .service-card__icon {
+    transform: translateX(3px);
+  }
+
   .service-card:not(.service-card--delivery):hover {
-    background: #222222;
+    background: var(--g8);
   }
 
   .service-card--delivery:hover {
@@ -263,140 +455,24 @@
 
   .hero-gallery img,
   .kitchen-grid img {
-    transition: transform 0.45s ease;
+    transition: transform 0.45s var(--ease-out);
+  }
+
+  .hero-gallery figcaption,
+  .kitchen-grid figcaption {
+    transition:
+      background-color var(--motion-base) var(--ease-standard),
+      transform var(--motion-base) var(--ease-out);
   }
 
   .hero-gallery figure:hover img,
   .kitchen-grid figure:hover img {
     transform: scale(1.035);
   }
-}
 
-@media (min-width: 37.5rem) {
-  .hero {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    align-items: center;
-    gap: clamp(2rem, 5vw, 4rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 7.5vw, 4.7rem);
-  }
-
-  .hero-gallery {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    min-height: 26rem;
-  }
-
-  .hero-gallery__main {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    height: auto;
-  }
-
-  .hero-gallery figure:not(.hero-gallery__main) {
-    height: auto;
-  }
-
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .kitchen-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .kitchen-grid figure {
-    height: clamp(18rem, 48vw, 28rem);
-  }
-
-  .kitchen-grid figure:last-child {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 48rem) {
-  .hours-section {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    align-items: center;
-    gap: clamp(3rem, 8vw, 7rem);
-  }
-
-  .hours-row {
-    grid-template-columns: auto minmax(0, 1fr) auto;
-  }
-
-  .hours-row img {
-    grid-row: auto;
-  }
-
-  .hours-list .button {
-    justify-self: start;
-  }
-}
-
-@media (min-width: 64rem) {
-  .hero {
-    min-height: 42rem;
-  }
-
-  .hero h1 {
-    font-size: clamp(4rem, 6.2vw, 5.6rem);
-  }
-
-  .hero-gallery {
-    min-height: 32rem;
-  }
-
-  .service-card {
-    min-height: 15rem;
-  }
-
-  .kitchen-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .kitchen-grid figure,
-  .kitchen-grid figure:last-child {
-    grid-column: auto;
-    height: 28rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .hero {
-    min-height: 48rem;
-  }
-
-  .hero-gallery {
-    min-height: 38rem;
-  }
-
-  .service-card {
-    min-height: 17rem;
-  }
-
-  .kitchen-grid figure,
-  .kitchen-grid figure:last-child {
-    height: 34rem;
-  }
-}
-
-@media (min-width: 120rem) {
-  .hero {
-    min-height: 54rem;
-  }
-
-  .hero-gallery {
-    min-height: 44rem;
-  }
-
-  .service-grid {
-    gap: 1.25rem;
-  }
-
-  .service-card {
-    min-height: 19rem;
+  .hero-gallery figure:hover figcaption,
+  .kitchen-grid figure:hover figcaption {
+    background: color-mix(in srgb, var(--g11) 90%, transparent);
+    transform: translateY(-2px);
   }
 }

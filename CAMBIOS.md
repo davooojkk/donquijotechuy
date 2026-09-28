@@ -21,3 +21,13 @@ También se separaron los ingredientes, acompañamientos y aclaraciones que esta
 La carta presencial ya no muestra accesos a WhatsApp ni una opción de reserva inexistente. El bloque lateral quedó como una ayuda informativa para quienes ya están siendo atendidos en el local.
 
 En teléfonos, la lista de categorías se puede deslizar directamente sobre los botones y la barra de desplazamiento visual permanece oculta.
+
+## Tercera etapa: optimización responsive, movimiento y rendimiento
+
+Se corrigieron los puntos de quiebre intermedios para que la portada conserve una composición cómoda a 600 px y el diseño de dos columnas comience recién en tablets. La barra de categorías permanece en una sola fila desplazable, evitando que ocupe demasiado alto o se superponga con el resumen lateral.
+
+El bloque de delivery vuelve a una estructura apilada en tablets, se eliminó el ancho mínimo que provocaba desplazamiento horizontal en navegadores estrechos y se mejoró la legibilidad de descripciones y etiquetas de precios. También se añadieron márgenes seguros para dispositivos con recortes laterales.
+
+Se incorporó un sistema de movimiento breve y coherente: entrada suave del encabezado principal, revelado progresivo de secciones, apertura animada del menú móvil, microinteracciones en botones y tarjetas, transición entre categorías y una cabecera con respuesta visual al desplazamiento. Todas las animaciones respetan la preferencia de movimiento reducido.
+
+La carga inicial prioriza únicamente la imagen principal, las imágenes secundarias se decodifican de forma asíncrona y las tarjetas de la carta utilizan renderizado diferido cuando el navegador lo admite. La categoría activa también queda centrada y visible al abrir o recargar un enlace con categoría seleccionada.

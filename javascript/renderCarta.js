@@ -100,6 +100,7 @@ export function renderCarta(data, options = {}) {
 
   const friendlyNames = options.friendlyNames || {};
   const showPortion = options.showPortion !== false;
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const categories = Object.entries(data).filter(([, category]) =>
     ["simple", "subcategorias"].includes(category.tipo),
   );
@@ -119,6 +120,17 @@ export function renderCarta(data, options = {}) {
     : slugify(categories[0][0]);
 
   const buttons = new Map();
+
+  function centerActiveButton(button) {
+    if (!button) return;
+
+    const targetLeft =
+      button.offsetLeft - (categoryContainer.clientWidth - button.offsetWidth) / 2;
+    categoryContainer.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: reducedMotionQuery.matches ? "auto" : "smooth",
+    });
+  }
 
   function renderSelectedCategory() {
     const selected = categoryBySlug.get(selectedSlug);
@@ -167,6 +179,18 @@ export function renderCarta(data, options = {}) {
     buttons.forEach((button, slug) => {
       button.setAttribute("aria-pressed", String(slug === selectedSlug));
     });
+
+    centerActiveButton(buttons.get(selectedSlug));
+
+    if (!reducedMotionQuery.matches && typeof menuContainer.animate === "function") {
+      menuContainer.animate(
+        [
+          { opacity: 0.35, transform: "translateY(0.5rem)" },
+          { opacity: 1, transform: "translateY(0)" },
+        ],
+        { duration: 220, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      );
+    }
   }
 
   categories.forEach(([name]) => {
@@ -182,7 +206,6 @@ export function renderCarta(data, options = {}) {
       selectedSlug = slug;
       window.history.replaceState(null, "", `#${slug}`);
       renderSelectedCategory();
-      button.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
     });
     buttons.set(slug, button);
     categoryContainer.appendChild(button);

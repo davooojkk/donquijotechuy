@@ -18,10 +18,17 @@
   --g10: #1a1a1a;
   --g11: #0d0d0d;
 
-  --paper: #f8f4ea;
-  --surface: #ffffff;
+  --paper: var(--g1);
+  --surface: var(--g2);
   --ink: var(--g11);
-  --muted: #706b61;
-  --line: #ddd5c5;
-  --focus: #876500;
+  --muted: var(--g7);
+  --line: var(--g5);
+  --focus: var(--a5);
+
+  --motion-fast: 160ms;
+  --motion-base: 220ms;
+  --motion-enter: 480ms;
+  --motion-hero: 620ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }

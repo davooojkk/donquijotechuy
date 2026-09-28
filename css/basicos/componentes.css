@@ -6,10 +6,10 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
-  min-width: 20rem;
   margin: 0;
   overflow-x: hidden;
   background: var(--paper);
@@ -68,6 +68,7 @@ ol {
 :focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 4px;
+  box-shadow: 0 0 0 2px var(--g11);
 }
 
 section[id] {
@@ -75,8 +76,12 @@ section[id] {
 }
 
 .page-shell {
-  width: min(calc(100% - 2rem), 78rem);
+  --shell-gutter: 1rem;
+
+  width: min(calc(100% - var(--shell-gutter) - var(--shell-gutter)), 78rem);
   margin-inline: auto;
+  padding-inline-start: max(0px, calc(env(safe-area-inset-left) - var(--shell-gutter)));
+  padding-inline-end: max(0px, calc(env(safe-area-inset-right) - var(--shell-gutter)));
 }
 
 .container {
@@ -118,14 +123,16 @@ section[id] {
   text-align: center;
   text-transform: uppercase;
   transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    background-color var(--motion-base) var(--ease-standard),
+    border-color var(--motion-base) var(--ease-standard),
+    box-shadow var(--motion-base) var(--ease-standard),
+    color var(--motion-base) var(--ease-standard),
+    transform var(--motion-base) var(--ease-out);
 }
 
 .button img {
   flex: 0 0 auto;
+  transition: transform var(--motion-base) var(--ease-out);
 }
 
 .button--primary {
@@ -135,16 +142,16 @@ section[id] {
 }
 
 .button--secondary {
-  border-color: var(--line);
-  background: transparent;
-  color: var(--ink);
+  border-color: var(--g11);
+  background: var(--g11);
+  color: var(--surface);
 }
 
 .eyebrow {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  color: #876500;
+  color: var(--g8);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -182,13 +189,97 @@ section[id] {
   color: var(--surface);
 }
 
+.section-heading--light .eyebrow {
+  color: var(--a5);
+}
+
 .section-heading--light p {
   color: var(--g3);
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(0.9rem);
+  transition:
+    opacity var(--motion-enter) var(--ease-out),
+    transform var(--motion-enter) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes enter-softly {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes image-settle {
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__copy > *,
+  .menu-hero__inner > * {
+    animation: enter-softly var(--motion-hero) var(--ease-out) both;
+  }
+
+  .hero__copy > :nth-child(2),
+  .menu-hero__inner > :nth-child(2) {
+    animation-delay: 70ms;
+  }
+
+  .hero__copy > :nth-child(3),
+  .menu-hero__inner > :nth-child(3) {
+    animation-delay: 130ms;
+  }
+
+  .hero__copy > :nth-child(4) {
+    animation-delay: 190ms;
+  }
+
+  .hero__copy > :nth-child(5) {
+    animation-delay: 240ms;
+  }
+
+  .hero-gallery figure {
+    animation: image-settle var(--motion-hero) var(--ease-out) both;
+  }
+
+  .hero-gallery figure:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .hero-gallery figure:nth-child(3) {
+    animation-delay: 140ms;
+  }
+}
+
 @media (hover: hover) {
   .button:hover {
+    box-shadow: 0 10px 24px color-mix(in srgb, var(--g11) 10%, transparent);
     transform: translateY(-2px);
+  }
+
+  .button:hover img {
+    transform: translateX(2px);
   }
 
   .button--primary:hover {
@@ -197,37 +288,9 @@ section[id] {
   }
 
   .button--secondary:hover {
-    border-color: var(--ink);
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .page-shell {
-    width: min(calc(100% - 3rem), 78rem);
-  }
-
-  .section-heading {
-    grid-template-columns: minmax(0, 1.1fr) minmax(15rem, 0.9fr);
-    align-items: end;
-    gap: 2rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .page-shell {
-    width: min(calc(100% - 6rem), 100rem);
-  }
-}
-
-@media (min-width: 120rem) {
-  .page-shell {
-    width: min(calc(100% - 10rem), 112rem);
-  }
-}
-
-@media (min-width: 64rem) {
-  body.menu-open {
-    overflow: visible;
+    border-color: var(--g9);
+    background: var(--g9);
+    color: var(--a5);
   }
 }
 
@@ -239,7 +302,15 @@ section[id] {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

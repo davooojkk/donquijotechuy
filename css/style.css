@@ -12,3 +12,6 @@
 
 /* carta */
 @import "./carta/carta.css";
+
+/* responsive */
+@import "./basicos/responsive.css";
